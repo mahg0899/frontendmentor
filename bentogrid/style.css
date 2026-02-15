@@ -1,0 +1,301 @@
+:root {
+    --purple-100: #dacffc;
+    --purple-500: #865ff1;
+    --yellow-100: #f9eee1;
+    --yellow-500: #ffcb6b;
+    --white: #ffffff;
+    --black: #121212;
+    --font-dm-sans: 'DM Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 2rem;
+    font-family: var(--font-dm-sans);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.card {
+    border-radius: 1rem;
+    padding: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2 {
+    margin: 0;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+}
+
+p {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.2;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.social-10x {
+    background-color: var(--purple-500);
+    color: var(--white);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-10x h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.social-10x .highlight {
+    color: var(--yellow-500);
+}
+
+.social-10x .stars-img {
+    width: 60%;
+    margin-bottom: 0.5rem;
+}
+
+.social-10x p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.manage-multiple {
+    background-color: var(--white);
+    justify-content: space-between;
+}
+
+.manage-multiple .platforms-img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.manage-multiple h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.consistent-schedule {
+    background-color: var(--yellow-500);
+    overflow: hidden;
+    padding-bottom: 0;
+}
+
+.consistent-schedule h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.consistent-schedule .schedule-img {
+    width: 80%;
+    margin-top: 1rem;
+}
+
+.schedule-social {
+    background-color: var(--purple-100);
+    text-align: left;
+    align-items: center;
+    text-align: center;
+}
+
+.schedule-social h2 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.schedule-social .post-timing-img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.schedule-social .caption {
+    font-size: 1rem;
+    text-align: center;
+    max-width: 90%;
+}
+
+.grow-followers {
+    background-color: var(--purple-500);
+    color: var(--white);
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.grow-followers .growth-img {
+    width: 50%;
+}
+
+.grow-followers h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    width: 50%;
+}
+
+.audience-growth {
+    background-color: var(--white);
+    justify-content: center;
+    padding: 2rem;
+}
+
+.audience-growth h2 {
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+
+.audience-growth p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.audience-growth .audience-img {
+    width: 60%;
+}
+
+.create-quicker {
+    background-color: var(--yellow-100);
+    justify-content: center;
+    position: relative;
+}
+
+.create-quicker h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.create-quicker .purple-text {
+    color: var(--purple-500);
+    font-style: italic;
+}
+
+.create-quicker .create-post-img {
+    width: 60%;
+}
+
+.write-ai {
+    background-color: var(--yellow-500);
+    padding: 2rem;
+}
+
+.write-ai h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.write-ai .ai-chat-img {
+    width: 80%;
+}
+
+.attribution {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.attribution a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 2rem;
+        grid-template-areas:
+            "create-quicker social-10x social-10x schedule-social"
+            "create-quicker manage-multiple consistent-schedule schedule-social"
+            "write-ai audience-growth grow-followers grow-followers";
+    }
+
+    .create-quicker {
+        grid-area: create-quicker;
+    }
+
+    .social-10x {
+        grid-area: social-10x;
+    }
+
+    .schedule-social {
+        grid-area: schedule-social;
+    }
+
+    .write-ai {
+        grid-area: write-ai;
+    }
+
+    .manage-multiple {
+        grid-area: manage-multiple;
+    }
+
+    .consistent-schedule {
+        grid-area: consistent-schedule;
+    }
+
+    .audience-growth {
+        grid-area: audience-growth;
+    }
+
+    .grow-followers {
+        grid-area: grow-followers;
+    }
+
+    .social-10x {
+        padding: 50px;
+        align-items: center;
+    }
+
+    .schedule-social {
+        padding: 40px 20px;
+    }
+
+    .create-quicker {
+        padding: 40px 30px;
+    }
+
+    .manage-multiple .platforms-img {
+        width: 120%;
+        margin-left: -10%;
+    }
+
+    .consistent-schedule .schedule-img {
+        width: 70%;
+        margin-bottom: -30px;
+    }
+}
